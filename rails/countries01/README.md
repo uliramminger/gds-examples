@@ -2,7 +2,8 @@
 
 This is an example of a Rails application using the GDS language to seed initial data into a database.
 
-Please take a look in the file db/seeds.rb
+Please take a look in the file [db/seeds.rb](https://github.com/uliramminger/gds-examples/blob/master/rails/countries01/db/seeds.rb)
+
 
 ## Getting Started
 
