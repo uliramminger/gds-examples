@@ -4,7 +4,7 @@ This is an example of a Rails application using the GDS language to seed initial
 
 This example includes only one Active Record model: Country
 
-![er diagram](https://github.com/uliramminger/gds-examples/blob/master/rails/countries01/erd-diagram.svg)
+![er diagram](https://github.com/uliramminger/gds-examples/blob/master/rails/countries01/er-diagram.svg)
 
 Please take a look in the file [db/seeds.rb](https://github.com/uliramminger/gds-examples/blob/master/rails/countries01/db/seeds.rb)
 which seeds initial data into the database.
