@@ -1,0 +1,31 @@
+h1 A list of all countries
+
+table
+  tr
+    th Country
+    th Capital
+    th Area [m²]
+    th Population
+    th Vehicle registration code
+    th ISO 3166 code
+    th Calling code
+  - @countries.each do |c|
+    tr
+      td= c.name
+      td= c.capital
+      td= c.area
+      td= c.population
+      td= c.vehicleRegistrationCode
+      td= c.iso3166code
+      td= c.callingCode
+    - if c.bigCities.length > 0
+      tr
+        td
+          table( style="margin-left: 5rem; width: 50%;")
+            tr
+              th City
+              th Population
+            - c.bigCities.each do |city|
+              tr
+                td= city.name
+                td= city.population
