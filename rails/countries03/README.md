@@ -1,20 +1,23 @@
-# countries02
+# countries03
 
 This is an example of a Rails application using the GDS language to seed initial data into the database.
 
-This example includes two Active Record models: Country and City.  
-There is a one-to-many relationship between Country and City. One country has many cities.
+This example includes four Active Record models: Country, City, Museum and Person.  
+There are a couple of one-to-many relationships:
+- between Country and City: one country has many cities
+- between City and Museum: one city has many museums
+- between Country and Person: one country has many famous people
 
-![er diagram](https://github.com/uliramminger/gds-examples/blob/master/rails/countries02/er-diagram.svg)
+![er diagram](https://github.com/uliramminger/gds-examples/blob/master/rails/countries03/er-diagram.svg)
 
-Please take a look into the file [db/seeds.rb](https://github.com/uliramminger/gds-examples/blob/master/rails/countries02/db/seeds.rb)
+Please take a look into the file [db/seeds.rb](https://github.com/uliramminger/gds-examples/blob/master/rails/countries03/db/seeds.rb)
 which seeds initial data into the database.
 
 ## Getting Started
 
 Enter the project folder
 ~~~
-$ cd gds-examples/rails/countries02
+$ cd gds-examples/rails/countries03
 ~~~
 
 Install the gems

@@ -1,0 +1,62 @@
+h1 A list of all countries
+
+table
+  tr
+    th Country
+    th Capital
+    th Area [m²]
+    th Population
+    th Vehicle registration code
+    th ISO 3166 code
+    th Calling code
+  - @countries.each do |c|
+    tr
+      td= c.name
+      td= c.capital
+      td= c.area
+      td= c.population
+      td= c.vehicleRegistrationCode
+      td= c.iso3166code
+      td= c.callingCode
+    - if c.bigCities.length > 0
+      tr
+        td
+          table( style="margin-left: 5rem; width: 70%;")
+            tr
+              th City
+            tr
+              th Name
+              th Population
+            - c.bigCities.each do |city|
+              tr
+                td= city.name
+                td= city.population
+              tr
+                - if city.museums.length > 0
+                  tr
+                    td
+                      table( style="margin-left: 5rem; width: 70%;")
+                        tr
+                          th Museums
+                        tr
+                          th Name
+                          th Established
+                        - city.museums.each do |museum|
+                          tr
+                            td= museum.name
+                            td= museum.established
+    - if c.famousPeople.length > 0
+      tr
+        td
+          table( style="margin-left: 5rem; width: 80%;")
+            tr
+              th Famous people
+            tr
+              th First name
+              th Last name
+              th Year of birth
+            - c.famousPeople.each do |p|
+              tr
+                td= p.firstname
+                td= p.lastname
+                td= p.yearOfBirth

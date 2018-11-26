@@ -6,7 +6,7 @@ This example includes only one Active Record model: Country
 
 ![er diagram](https://github.com/uliramminger/gds-examples/blob/master/rails/countries01/er-diagram.svg)
 
-Please take a look in the file [db/seeds.rb](https://github.com/uliramminger/gds-examples/blob/master/rails/countries01/db/seeds.rb)
+Please take a look into the file [db/seeds.rb](https://github.com/uliramminger/gds-examples/blob/master/rails/countries01/db/seeds.rb)
 which seeds initial data into the database.
 
 ## Getting Started
