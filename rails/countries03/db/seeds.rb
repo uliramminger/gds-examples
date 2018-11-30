@@ -30,7 +30,7 @@ $person(firstname,lastname,yearOfBirth)
           :                                                                                                                                                        Deutsches Museum       | 1903
     famousPeople, $person
       :                                                                                                                                                                                                            Albert            | Einstein         | 1879
-      :                                                                                                                                                                                                            Fiedrich          | Schiller         | 1759
+      :                                                                                                                                                                                                            Friedrich         | Schiller         | 1759
       :                                                                                                                                                                                                            Johann Sebastian  | Bach             | 1685
   : France        | Paris            |    643_801  |    66_991_000 | F                       | FR          | 33
     bigCities , $city
@@ -42,13 +42,11 @@ EOS
 countries.each do |countrydef|
   country = Country.create!( countrydef.except(:bigCities,:famousPeople) )
 
-  if countrydef[:bigCities]
-    countrydef[:bigCities].each do |citydef|
-      city = City.new( citydef.except(:museums) )
-      country.bigCities << city
-      city.museums.create!( citydef[:museums] )  if citydef[:museums]
-    end
-  end
+  countrydef[:bigCities].each do |citydef|
+    city = City.new( citydef.except(:museums) )
+    country.bigCities << city
+    city.museums.create!( citydef[:museums] )  if citydef[:museums]
+  end  if countrydef[:bigCities]
 
   country.famousPeople.create!( countrydef[:famousPeople] )  if countrydef[:famousPeople]
 end
