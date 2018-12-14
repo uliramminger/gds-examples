@@ -1,8 +1,9 @@
 # db/seeds.rb
 
 countries = GDstruct.c( <<-EOS )
-$country(name,capital,area,population,vehicleRegistrationCode,iso3166code,callingCode)
-, $country   /*
+@schema country( name, capital, area, population,vehicleRegistrationCode, iso3166code, callingCode )
+, @schema country                                                                                                                     /*
+  ----------------------------------------------------------------------------------------------------------------------------
     name            capital            area (km^2)   population      vehicleRegistrationCode   iso3166code   callingCode
   ---------------------------------------------------------------------------------------------------------------------------- */
   : Australia     | Canberra         |  7_692_024  |    25_130_600 | AUS                     | AU          | 61
@@ -27,4 +28,3 @@ EOS
 countries.each do |c|
   country = Country.create!( c )
 end
-
