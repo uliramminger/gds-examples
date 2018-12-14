@@ -1,0 +1,31 @@
+h1 A list of all countries
+
+table
+  tr
+    th Country
+    th Capital
+    th Area [m²]
+    th Population
+  - @countries.each do |c|
+    tr
+      td= c.name
+      td= c.capital
+      td= c.area
+      td= c.population
+      tr
+        td
+          table( style="margin-left: 5rem; width: 70%;")
+            tr
+              th Currency
+            tr
+              th Name
+              th Symbol
+              th ISO 4271 Code
+              th ISO 4271 Number
+              th Subunit
+            tr
+              td= c.currency.name
+              td= c.currency.symbol
+              td= c.currency.iso4217code
+              td= c.currency.iso4217number
+              td= c.currency.subunit

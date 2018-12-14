@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  symbol: MyString
+  iso4217code: MyString
+  iso4217number: 1
+  subunit: MyString
+
+two:
+  name: MyString
+  symbol: MyString
+  iso4217code: MyString
+  iso4217number: 1
+  subunit: MyString
