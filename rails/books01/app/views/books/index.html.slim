@@ -1,0 +1,26 @@
+h1 A list of all books
+
+table
+  tr
+    th Title
+    th Subtitle
+    th Year
+    th ISBN
+  - @books.each do |b|
+    tr
+      td= b.title
+      td= b.subtitle
+      td= b.year
+      td= b.isbn
+      tr
+        td
+          table( style="margin-left: 5rem; width: 70%;")
+            tr
+              th Authors
+            tr
+              th First name
+              th Last name
+            - b.authors.each do |a|
+              tr
+                td= a.firstname
+                td= a.lastname
